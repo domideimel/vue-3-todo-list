@@ -30,7 +30,7 @@ const handleSubmit = () => {
 // Theme
 const isDark = usePreferredDark()
 
-const currentTheme = computed(() => {
+const currentTheme = computed<string>(() => {
   return isDark.value ? 'dark' : 'light'
 })
 
