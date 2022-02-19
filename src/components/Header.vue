@@ -58,11 +58,12 @@ const handleChangeTheme = () => {
             type="text"
             placeholder="Enter Todo"
             class="input basis-full w-full"
-            v-model.trim="todoInput"
+            v-model="todoInput"
           />
           <transition>
             <button
               @click="clearInput"
+              type="button"
               v-show="todoInput.length"
               class="btn btn-square absolute right-0 bg-transparent border-0 hover:bg-transparent"
               :class="[theme === 'dark' ?'fill-current' : 'fill-neutral']"
