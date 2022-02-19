@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.2",
+    "@vueuse/core": "^7.6.2",
     "daisyui": "^2.0.9",
     "pinia": "^2.0.0-rc.10",
     "redaxios": "^0.4.1",
