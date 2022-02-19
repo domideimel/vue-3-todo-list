@@ -46,7 +46,6 @@ const useTodoStore = defineStore('todo', {
   },
 })
 const createNewTodo = (todo: string): Todo => ({
-  userID: uuid(),
   id: uuid(),
   title: todo,
   completed: false,
