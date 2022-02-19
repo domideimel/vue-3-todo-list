@@ -37,7 +37,10 @@ const handleDelete = () => {
       </button>
       <div class="form-control w-full ">
         <label class="cursor-pointer label w-full">
-          <span class="label-text">{{ props.todo.title }}</span>
+          <span
+            class="label-text"
+            :class="[props.todo.completed && 'line-through']"
+          >{{ props.todo.title }}</span>
           <input
             type="checkbox"
             :checked="props.todo.completed"
