@@ -20,10 +20,11 @@ const todoStore = useTodoStore()
 
 // handle Submit
 const handleSubmit = () => {
-  if (todoInput.value !== '') {
-    const todo = createNewTodo(todoInput.value)
-    todoStore.createNewTodo(todo)
-  }
+  console.log(todoInput.value)
+  if (!todoInput.value.length) return
+
+  const todo = createNewTodo(todoInput.value)
+  todoStore.createNewTodo(todo)
   clearInput()
 }
 
@@ -43,7 +44,7 @@ const handleChangeTheme = () => {
 </script>
 
 <template>
-  <header class="min-h-[33vmin] relative w-full flex items-center justify-center bg-neutral/[.6]">
+  <header class="min-h-[33vh] lg:min-h-[33vmin] relative w-full flex items-center justify-center bg-neutral/[.6]">
     <img
       :src="imageURL"
       loading="lazy"

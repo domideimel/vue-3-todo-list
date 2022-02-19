@@ -14,12 +14,12 @@ const useTodoStore = defineStore('todo', {
   actions: {
     async fetchTodos () {
       const { data: todos } = await axios.get<Todo[]>('https://jsonplaceholder.typicode.com/todos')
-      this.todos = todos
+      this.todos = todos.splice(0, 10);
     },
     createNewTodo (todo: Todo) {
       if (!todo) return
 
-      this.todos.push(todo)
+      this.todos = [todo, ...this.todos]
     },
 
     updateTodo (id: string, payload: Todo) {
