@@ -20,7 +20,6 @@ const todoStore = useTodoStore()
 
 // handle Submit
 const handleSubmit = () => {
-  console.log(todoInput.value)
   if (!todoInput.value.length) return
 
   const todo = createNewTodo(todoInput.value)
