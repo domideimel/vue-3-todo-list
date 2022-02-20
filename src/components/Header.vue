@@ -47,10 +47,7 @@ const handleChangeTheme = () => {
 </script>
 
 <template>
-  <header
-    class="min-h-[33vh] lg:min-h-[33vmin] relative w-full flex items-center justify-center bg-neutral/[.6]"
-    ref="header"
-  >
+  <header class="min-h-[33vh] lg:min-h-[33vmin] relative w-full flex items-center justify-center bg-neutral/[.6]">
     <img
       :src="imageURL"
       loading="lazy"
