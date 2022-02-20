@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref } from 'vue'
 import { vh, vmin, vw } from '../lib/helper/viewport'
 import useTodoStore, { createNewTodo } from '../store/todo'
-import { usePreferredDark, breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+import { breakpointsTailwind, useBreakpoints, usePreferredDark } from '@vueuse/core'
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 
