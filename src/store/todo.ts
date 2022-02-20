@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia'
 import { Todo } from '../types/todo'
 import { v4 as uuid } from 'uuid'
-import axios from 'redaxios'
 
 export type RootState = {
   todos: Todo[];
@@ -12,10 +11,6 @@ const useTodoStore = defineStore('todo', {
     todos: [],
   } as RootState),
   actions: {
-    async fetchTodos () {
-      const { data: todos } = await axios.get<Todo[]>('https://jsonplaceholder.typicode.com/todos')
-      this.todos = todos.splice(0, 10);
-    },
     createNewTodo (todo: Todo) {
       if (!todo) return
 
