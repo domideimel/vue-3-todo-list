@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import TodoListItem from './TodoListItem.vue'
 import draggableComponent from 'vuedraggable'
-
 import useTodoStore, { todoState } from '../store/todo'
 import { computed } from 'vue'
 import { Todo } from '../types/todo'
@@ -19,19 +18,17 @@ const todos = computed<Todo[]>({
 
 <template>
   <transition>
-    <ul
+    <draggableComponent
+      v-model="todos"
+      item-key="id"
+      tag="ul"
       v-if="todos.length"
       class="menu bg-base-100 menu-compact lg:menu-normal w-full p-2 rounded-box -mt-[25vmin] sm:-mt-[5min] md:-mt-[12vh] lg:-mt-[12vmin] shadow"
     >
-      <draggableComponent
-        v-model="todos"
-        item-key="id"
-      >
-        <template #item="{element}">
-          <todo-list-item :key="element.id" :todo="element"/>
-        </template>
-      </draggableComponent>
-    </ul>
+      <template #item="{element}">
+        <todo-list-item :key="element.id" :todo="element"/>
+      </template>
+    </draggableComponent>
   </transition>
 </template>
 
