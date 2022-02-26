@@ -7,7 +7,7 @@ export type RootState = {
   todos: Todo[];
 };
 
-const todoState = useStorage('todos', [] as Todo[])
+export const todoState = useStorage('todos', [] as Todo[])
 
 const useTodoStore = defineStore('todo', {
   state: () => ({
