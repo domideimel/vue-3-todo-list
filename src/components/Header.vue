@@ -45,7 +45,6 @@ const toggleDark = useToggle(isDark)
   <header class="min-h-[33vh] lg:min-h-[33vmin] relative w-full flex items-center justify-center bg-neutral/[.6]">
     <img
       :src="imageURL"
-      loading="lazy"
       alt=""
       class="absolute w-full object-cover max-h-[33vh] lg:max-h-[33vmin] -z-10 top-0 left-0 bottom-0 right-0 h-full"
     />
